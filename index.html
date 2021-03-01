@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCalculator 1.2</title>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; background-color: crimson; color: white; padding: 16px">
+        QCalculator 1.2
+    </h1>   
+    <br>
+    <div class="container"
+    style="font-family: Arial, Helvetica, sans-serif; background-color: crimson; color: white; padding: 16px">
+        <h3>Name:</h3><input type="text" id="name" onchange="(this.value)" required>
+        <br>
+        <br>
+        <h3>Starting bid:</h3> <input type="number" id="startingBid" onchange="(this.value)" required>
+        <br>
+        <br>
+        <label for="edu" style="font-weight: 600;">Graduation:</label>
+        <select name="edu" id="education">
+            <option value="1"></option>
+            <option value="1.5" style="font-weight: 600;">Undergraduate degree</option>
+            <option value="1.2" style="font-weight: 600;">College degree</option>
+            <option value="1.05" style="font-weight: 600;">High school degree</option>
+            <option value="0.9" style="font-weight: 600;">Middle school degree</option>
+        </select>
+        <br>
+        <br>
+        <label for="fnw" style="font-weight: 600;">Family net worth:</label>
+        <select name="fnw" id="familyNetWorth">
+            <option value="1"></option>
+            <option value="2" style="font-weight: 600;">More than $100,000</option>
+            <option value="1.5" style="font-weight: 600;">Between $50,000 and $100,000</option>
+            <option value="1.2" style="font-weight: 600;">Less than $50,000</option>
+        </select>
+        <br>
+        <br>
+        <label for="skills" style="font-weight: 600;">Skills:</label> <br>
+        <form name = "skilll">
+        <input type="checkbox" value="100" id="skill1"> Playing on dombra <br>
+        <input type="checkbox" value="200" id="skill2"> Good cook <br>
+        <input type="checkbox" value="150" id="skill3"> Easygoing character <br>
+        <input type="checkbox" value="100" id="skill4"> Sings well <br>
+        </form>
+        <br>
+        <br>
+        <label for="" style="font-weight: 600;">Age: </label>
+        <select name="age" id="ages">
+        <option value="1.5" style="font-weight: 600;"> 18-23 </option>
+        <option value="1.2" style="font-weight: 600;"> 24-27 </option>
+        <option value="0.95" style="font-weight: 600;"> 28+ </option>
+        </select>
+        <br>
+        <br>
+        <label for="" style="font-weight: 600;">Reputation: </label><br>
+        <form name = "reputation">
+        <input type="checkbox" value="0.85" id="rep1"> Gossips about parent's attitude <br>
+        <input type="checkbox" value="0.9" id="rep2"> Gossips about character <br>
+        <input type="checkbox" value="-200" id="rep3"> General gossips about person <br>
+        </form>
+        <br>
+        <br>
+        <label for="" style="font-weight: 600;">Love letter: </label> <br>
+        <textarea name="loveLetter" id="loveLetter" cols="30" rows="10" maxlength="500" onchange="(this.value)"></textarea>
+        <button onclick = "qalculate(document.getElementById('startingBid').value, document.getElementById('name').value, document.getElementById('loveLetter').value)">Qalculate</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
